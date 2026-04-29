@@ -1,0 +1,9 @@
+{
+  "id": "depends",
+  "name": "Depends",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Reactive frontmatter dependency links. Declare relationships between notes by id, see them as wikilinks in the graph view.",
+  "author": "Aru Gyani",
+  "isDesktopOnly": false
+}
