@@ -34,8 +34,6 @@ The plugin maintains two sections in the note:
 You do not have to add the headings yourself. They appear (and disappear) as
 soon as the relationships are present (or removed).
 
-<<<<<<< Updated upstream
-=======
 ## Settings
 
 | Setting | Default | Notes |
@@ -95,7 +93,6 @@ For development, `npm run dev` will watch and rebuild on save.
 * `npm test` runs the test suite (Vitest).
 * `npm run typecheck` runs TypeScript with no emit.
 
->>>>>>> Stashed changes
 ## License
 
 MIT
