@@ -3,7 +3,7 @@
   "name": "Depends",
   "version": "1.0.0",
   "minAppVersion": "1.5.0",
-  "description": "Declare dependencies between notes in frontmatter, then read them back as wikilinks rendered into managed sections so the graph view picks up the edges.",
+  "description": "Manage your cross-file dependencies and view them in the native graph view.",
   "author": "Aru Gyani",
   "isDesktopOnly": false
 }
