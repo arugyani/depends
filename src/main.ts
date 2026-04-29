@@ -1,5 +1,6 @@
 import {
   CachedMetadata,
+  MarkdownView,
   Notice,
   Plugin,
   TAbstractFile,
@@ -361,6 +362,23 @@ export default class DependsPlugin extends Plugin {
     }
 
     if (working === original) return;
-    await this.app.vault.modify(file, working);
+    await this.commitWrite(file, working);
+  }
+
+  private async commitWrite(file: TFile, content: string): Promise<void> {
+    const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+    if (view?.file?.path === file.path) {
+      const editor = view.editor;
+      const cursor = editor.getCursor();
+      const scroll = editor.getScrollInfo();
+      editor.setValue(content);
+      const lineCount = editor.lineCount();
+      const restoredLine = Math.min(cursor.line, Math.max(0, lineCount - 1));
+      const lineLen = editor.getLine(restoredLine).length;
+      editor.setCursor({ line: restoredLine, ch: Math.min(cursor.ch, lineLen) });
+      editor.scrollTo(scroll.left, scroll.top);
+      return;
+    }
+    await this.app.vault.modify(file, content);
   }
 }

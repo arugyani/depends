@@ -1,4 +1,4 @@
-import { App, Modal } from "obsidian";
+import { App, Modal, Setting } from "obsidian";
 import type { IdIndex } from "./index";
 import type { UpdateMode } from "./settings";
 
@@ -19,7 +19,7 @@ export class StatsModal extends Modal {
     const { contentEl } = this;
     const { mode, index } = this.stats;
     contentEl.empty();
-    contentEl.createEl("h2", { text: "Depends index stats" });
+    new Setting(contentEl).setName("Index stats").setHeading();
 
     const list = contentEl.createEl("ul");
     list.createEl("li", { text: `Mode: ${mode}` });

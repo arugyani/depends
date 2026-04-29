@@ -3,7 +3,7 @@
   "name": "Depends",
   "version": "1.0.0",
   "minAppVersion": "1.5.0",
-  "description": "Reactive frontmatter dependency links. Declare relationships between notes by id, see them as wikilinks in the graph view.",
+  "description": "Declare dependencies between notes in frontmatter, then read them back as wikilinks rendered into managed sections so the graph view picks up the edges.",
   "author": "Aru Gyani",
   "isDesktopOnly": false
 }
