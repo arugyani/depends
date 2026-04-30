@@ -20,6 +20,10 @@ test-watch:
 typecheck:
     npm run typecheck
 
+# Run Obsidian's eslint plugin checks
+lint:
+    npm run lint
+
 # Install npm dependencies
 setup:
     npm install

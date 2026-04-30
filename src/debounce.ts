@@ -1,3 +1,5 @@
+declare const activeWindow: typeof window;
+
 export interface DebouncedFn<A extends readonly unknown[]> {
   (...args: A): void;
   cancel(): void;
@@ -8,13 +10,13 @@ export function debounce<A extends readonly unknown[]>(
   fn: (...args: A) => void,
   ms: number,
 ): DebouncedFn<A> {
-  let timer: ReturnType<typeof setTimeout> | null = null;
+  let timer: number | null = null;
   let pending: A | null = null;
 
   const debounced = ((...args: A) => {
     pending = args;
-    if (timer !== null) clearTimeout(timer);
-    timer = setTimeout(() => {
+    if (timer !== null) activeWindow.clearTimeout(timer);
+    timer = activeWindow.setTimeout(() => {
       timer = null;
       const a = pending;
       pending = null;
@@ -24,7 +26,7 @@ export function debounce<A extends readonly unknown[]>(
 
   debounced.cancel = () => {
     if (timer !== null) {
-      clearTimeout(timer);
+      activeWindow.clearTimeout(timer);
       timer = null;
     }
     pending = null;
@@ -32,7 +34,7 @@ export function debounce<A extends readonly unknown[]>(
 
   debounced.flush = () => {
     if (timer !== null && pending) {
-      clearTimeout(timer);
+      activeWindow.clearTimeout(timer);
       timer = null;
       const a = pending;
       pending = null;

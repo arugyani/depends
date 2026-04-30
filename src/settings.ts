@@ -80,42 +80,33 @@ export class DependsSettingTab extends PluginSettingTab {
     new Setting(containerEl).setName("Frontmatter fields").setHeading();
 
     new Setting(containerEl)
-      .setName("Id field")
-      .setDesc("Frontmatter key that holds each note's unique id.")
+      .setName("ID field")
+      .setDesc("Frontmatter key that holds each note's unique ID.")
       .addText((t) =>
-        t
-          .setPlaceholder("id")
-          .setValue(this.plugin.settings.idField)
-          .onChange(async (v) => {
-            this.plugin.settings.idField = v.trim() || "id";
-            await save(true);
-          }),
+        t.setValue(this.plugin.settings.idField).onChange(async (v) => {
+          this.plugin.settings.idField = v.trim() || "id";
+          await save(true);
+        }),
       );
 
     new Setting(containerEl)
       .setName("Dependencies field")
       .setDesc("Frontmatter key listing ids this note depends on.")
       .addText((t) =>
-        t
-          .setPlaceholder("dependencies")
-          .setValue(this.plugin.settings.dependenciesField)
-          .onChange(async (v) => {
-            this.plugin.settings.dependenciesField = v.trim() || "dependencies";
-            await save(true);
-          }),
+        t.setValue(this.plugin.settings.dependenciesField).onChange(async (v) => {
+          this.plugin.settings.dependenciesField = v.trim() || "dependencies";
+          await save(true);
+        }),
       );
 
     new Setting(containerEl)
       .setName("Dependents field")
       .setDesc("Frontmatter key listing ids that depend on this note.")
       .addText((t) =>
-        t
-          .setPlaceholder("dependents")
-          .setValue(this.plugin.settings.dependentsField)
-          .onChange(async (v) => {
-            this.plugin.settings.dependentsField = v.trim() || "dependents";
-            await save(true);
-          }),
+        t.setValue(this.plugin.settings.dependentsField).onChange(async (v) => {
+          this.plugin.settings.dependentsField = v.trim() || "dependents";
+          await save(true);
+        }),
       );
 
     new Setting(containerEl)
@@ -124,20 +115,17 @@ export class DependsSettingTab extends PluginSettingTab {
         "Optional. When this field is present and falsy, the managed sections render empty (and are removed). Leave blank to disable.",
       )
       .addText((t) =>
-        t
-          .setPlaceholder("solved")
-          .setValue(this.plugin.settings.gateField)
-          .onChange(async (v) => {
-            this.plugin.settings.gateField = v.trim();
-            await save(true);
-          }),
+        t.setValue(this.plugin.settings.gateField).onChange(async (v) => {
+          this.plugin.settings.gateField = v.trim();
+          await save(true);
+        }),
       );
 
     new Setting(containerEl).setName("Directions").setHeading();
 
     new Setting(containerEl)
       .setName("Render dependencies")
-      .setDesc("Maintain a 'Depends on' section.")
+      .setDesc("Maintain the upstream section listing this note's prerequisites.")
       .addToggle((t) =>
         t.setValue(this.plugin.settings.enableDependencies).onChange(async (v) => {
           this.plugin.settings.enableDependencies = v;
@@ -147,7 +135,7 @@ export class DependsSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Render dependents")
-      .setDesc("Maintain a 'Dependents' section.")
+      .setDesc("Maintain the inverse section listing notes that depend on this one.")
       .addToggle((t) =>
         t.setValue(this.plugin.settings.enableDependents).onChange(async (v) => {
           this.plugin.settings.enableDependents = v;
@@ -177,35 +165,29 @@ export class DependsSettingTab extends PluginSettingTab {
     new Setting(containerEl)
       .setName("Depends on heading")
       .setDesc(
-        "Heading line for the upstream section. Use any heading level by prefixing with '#'. A bare phrase is treated as H1.",
+        "Heading line for the upstream section. Use any heading level by prefixing with '#'. A bare phrase becomes a top-level heading.",
       )
       .addText((t) =>
-        t
-          .setPlaceholder("# Depends on")
-          .setValue(this.plugin.settings.dependsOnHeading)
-          .onChange(async (v) => {
-            this.plugin.settings.dependsOnHeading = normalizeHeadingInput(
-              v,
-              DEFAULT_SETTINGS.dependsOnHeading,
-            );
-            await save(true);
-          }),
+        t.setValue(this.plugin.settings.dependsOnHeading).onChange(async (v) => {
+          this.plugin.settings.dependsOnHeading = normalizeHeadingInput(
+            v,
+            DEFAULT_SETTINGS.dependsOnHeading,
+          );
+          await save(true);
+        }),
       );
 
     new Setting(containerEl)
       .setName("Dependents heading")
       .setDesc("Heading line for the inverse section.")
       .addText((t) =>
-        t
-          .setPlaceholder("# Dependents")
-          .setValue(this.plugin.settings.dependentsHeading)
-          .onChange(async (v) => {
-            this.plugin.settings.dependentsHeading = normalizeHeadingInput(
-              v,
-              DEFAULT_SETTINGS.dependentsHeading,
-            );
-            await save(true);
-          }),
+        t.setValue(this.plugin.settings.dependentsHeading).onChange(async (v) => {
+          this.plugin.settings.dependentsHeading = normalizeHeadingInput(
+            v,
+            DEFAULT_SETTINGS.dependentsHeading,
+          );
+          await save(true);
+        }),
       );
 
     new Setting(containerEl).setName("Scope").setHeading();

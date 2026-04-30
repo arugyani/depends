@@ -24,15 +24,15 @@ export class StatsModal extends Modal {
     const list = contentEl.createEl("ul");
     list.createEl("li", { text: `Mode: ${mode}` });
     list.createEl("li", { text: `Tracked files: ${index.size()}` });
-    list.createEl("li", { text: `Unique ids: ${index.idCount()}` });
+    list.createEl("li", { text: `Unique IDs: ${index.idCount()}` });
 
     const dups = index.duplicateIds();
-    list.createEl("li", { text: `Duplicate ids: ${dups.length}` });
+    list.createEl("li", { text: `Duplicate IDs: ${dups.length}` });
     if (dups.length > 0) {
       const sub = contentEl.createEl("details");
-      sub.createEl("summary", { text: "Duplicate id details" });
+      sub.createEl("summary", { text: "Duplicate ID details" });
       for (const d of dups) {
-        sub.createEl("div", { text: `${d.id}: ${d.paths.join(", ")}` });
+        sub.createDiv({ text: `${d.id}: ${d.paths.join(", ")}` });
       }
     }
 
@@ -40,8 +40,8 @@ export class StatsModal extends Modal {
     list.createEl("li", { text: `Dangling references: ${dangling.length}` });
     if (dangling.length > 0) {
       const sub = contentEl.createEl("details");
-      sub.createEl("summary", { text: "Dangling id details" });
-      sub.createEl("div", { text: dangling.join(", ") });
+      sub.createEl("summary", { text: "Dangling ID details" });
+      sub.createDiv({ text: dangling.join(", ") });
     }
   }
 
