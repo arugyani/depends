@@ -1,5 +1,7 @@
 # Depends
 
+[![Submission](https://img.shields.io/github/issues/detail/state/obsidianmd/obsidian-releases/12416?label=community%20plugins%20PR)](https://github.com/obsidianmd/obsidian-releases/pull/12416) [![Review status](https://img.shields.io/github/issues/detail/label/obsidianmd/obsidian-releases/12416?label=status)](https://github.com/obsidianmd/obsidian-releases/pull/12416)
+
 Manage file dependencies for better graph viewing.
 
 ## What it does
