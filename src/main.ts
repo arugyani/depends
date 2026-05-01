@@ -25,7 +25,7 @@ import {
 } from "./settings";
 import { StatsModal } from "./stats-modal";
 
-const DEBOUNCE_MS = 150;
+const DEBOUNCE_MS = 400;
 
 export default class DependsPlugin extends Plugin {
   settings!: DependsSettings;
@@ -319,12 +319,25 @@ export default class DependsPlugin extends Plugin {
     }
   }
 
+  private findOpenView(file: TFile): MarkdownView | null {
+    for (const leaf of this.app.workspace.getLeavesOfType("markdown")) {
+      const view = leaf.view;
+      if (view instanceof MarkdownView && view.file?.path === file.path) {
+        return view;
+      }
+    }
+    return null;
+  }
+
   private async writeFileSections(file: TFile): Promise<void> {
     const cache = this.app.metadataCache.getFileCache(file);
     const fm = cache?.frontmatter ?? null;
     const s = this.settings;
 
-    const original = await this.app.vault.read(file);
+    const openView = this.findOpenView(file);
+    const original = openView
+      ? openView.editor.getValue()
+      : await this.app.vault.read(file);
     let working = stripLegacyBlock(original);
 
     const tracked = this.hasManagedFrontmatter(cache);
@@ -362,12 +375,15 @@ export default class DependsPlugin extends Plugin {
     }
 
     if (working === original) return;
-    await this.commitWrite(file, working);
+    await this.commitWrite(file, working, openView);
   }
 
-  private async commitWrite(file: TFile, content: string): Promise<void> {
-    const view = this.app.workspace.getActiveViewOfType(MarkdownView);
-    if (view?.file?.path === file.path) {
+  private async commitWrite(
+    file: TFile,
+    content: string,
+    view: MarkdownView | null,
+  ): Promise<void> {
+    if (view) {
       const editor = view.editor;
       const cursor = editor.getCursor();
       const scroll = editor.getScrollInfo();
