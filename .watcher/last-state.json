@@ -1,0 +1,9 @@
+{
+  "state": "open",
+  "labels": ["Ready for review", "plugin"],
+  "latest_comment_id": null,
+  "latest_comment_at": "2026-04-30",
+  "latest_comment_author": "ObsidianReviewBot",
+  "review_states": {},
+  "first_run_at": "2026-05-01T00:00:00Z"
+}
