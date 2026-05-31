@@ -5,5 +5,7 @@
   "latest_comment_at": "2026-04-30",
   "latest_comment_author": "ObsidianReviewBot",
   "review_states": {},
-  "first_run_at": "2026-05-01T00:00:00Z"
+  "first_run_at": "2026-05-01T00:00:00Z",
+  "last_fetch_failed_at": "2026-05-31T00:00:00Z",
+  "last_fetch_error": "gh CLI missing; GitHub API 403; PR page 404 from sandbox IP"
 }
