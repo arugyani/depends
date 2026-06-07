@@ -5,5 +5,7 @@
   "latest_comment_at": "2026-04-30",
   "latest_comment_author": "ObsidianReviewBot",
   "review_states": {},
-  "first_run_at": "2026-05-05T00:00:00Z"
+  "first_run_at": "2026-05-05T00:00:00Z",
+  "last_fetch_failed_at": "2026-06-07T16:10:35Z",
+  "last_fetch_error": "gh CLI missing; GitHub API 403 (shared IP rate-limited); MCP scoped to arugyani/depends only; local proxy restricted to git ops"
 }

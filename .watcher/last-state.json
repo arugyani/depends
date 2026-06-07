@@ -1,1 +1,11 @@
-ewogICJzdGF0ZSI6ICJvcGVuIiwKICAibGFiZWxzIjogWyJSZWFkeSBmb3IgcmV2aWV3IiwgInBsdWdpbiJdLAogICJsYXRlc3RfY29tbWVudF9pZCI6IG51bGwsCiAgImxhdGVzdF9jb21tZW50X2F0IjogIjIwMjYtMDQtMzAiLAogICJsYXRlc3RfY29tbWVudF9hdXRob3IiOiAiT2JzaWRpYW5SZXZpZXdCb3QiLAogICJyZXZpZXdfc3RhdGVzIjoge30sCiAgImZpcnN0X3J1bl9hdCI6ICIyMDI2LTA1LTAxVDAwOjAwOjAwWiIsCiAgImxhc3RfZmV0Y2hfZmFpbGVkX2F0IjogIjIwMjYtMDYtMDNUMDA6MDA6MDBaIiwKICAibGFzdF9mZXRjaF9lcnJvciI6ICJnaCBDTEkgbWlzc2luZzsgR2l0SHViIEFQSSA0MDM7IFBSIHBhZ2UgNDA0IGZyb20gc2FuZGJveCBJUDsgTUNQIHNjb3BlZCB0byBhcnVneWFuaS9kZXBlbmRzIG9ubHkiCn0K
+{
+  "state": "open",
+  "labels": ["Ready for review", "plugin"],
+  "latest_comment_id": null,
+  "latest_comment_at": "2026-04-30",
+  "latest_comment_author": "ObsidianReviewBot",
+  "review_states": {},
+  "first_run_at": "2026-05-01T00:00:00Z",
+  "last_fetch_failed_at": "2026-06-07T16:10:35Z",
+  "last_fetch_error": "gh CLI missing; GitHub API 403 (shared IP rate-limited); MCP scoped to arugyani/depends only; local proxy restricted to git ops"
+}
