@@ -1,0 +1,10 @@
+{
+  "state": "unknown",
+  "labels": [],
+  "latest_comment_id": null,
+  "latest_comment_at": null,
+  "latest_comment_author": null,
+  "review_states": {},
+  "first_run_at": "2026-06-19T00:00:00Z",
+  "error": "PR #12416 returned HTTP 404 on HTML page; REST API 403; search for arugyani PRs returned 0 results. PushNotification tool not available in session. gh CLI not installed."
+}
