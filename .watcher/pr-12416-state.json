@@ -6,5 +6,7 @@
   "latest_comment_author": null,
   "review_states": {},
   "first_run_at": "2026-06-19T00:00:00Z",
-  "error": "PR #12416 returned HTTP 404 on HTML page; REST API 403; search for arugyani PRs returned 0 results. PushNotification tool not available in session. gh CLI not installed."
+  "last_run_at": "2026-06-21T00:00:00Z",
+  "consecutive_failures": 3,
+  "error": "PERSISTENT FAILURE (since 2026-06-19): (1) obsidianmd/obsidian-releases is not in the GitHub MCP session scope and cannot be added — mcp__claude-code-remote server unavailable; (2) GitHub REST API returns HTTP 403 for unauthenticated WebFetch; (3) GitHub HTML pages return 404; (4) GitHub search returns 0 results for this repo; (5) PushNotification tool is not present in this session. Action required: add obsidianmd/obsidian-releases to the routine's repo scope and ensure PushNotification is wired up."
 }
