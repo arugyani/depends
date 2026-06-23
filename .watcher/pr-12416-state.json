@@ -6,7 +6,8 @@
   "latest_comment_author": null,
   "review_states": {},
   "first_run_at": "2026-06-19T00:00:00Z",
-  "last_run_at": "2026-06-21T00:00:00Z",
-  "consecutive_failures": 3,
-  "error": "PERSISTENT FAILURE (since 2026-06-19): (1) obsidianmd/obsidian-releases is not in the GitHub MCP session scope and cannot be added — mcp__claude-code-remote server unavailable; (2) GitHub REST API returns HTTP 403 for unauthenticated WebFetch; (3) GitHub HTML pages return 404; (4) GitHub search returns 0 results for this repo; (5) PushNotification tool is not present in this session. Action required: add obsidianmd/obsidian-releases to the routine's repo scope and ensure PushNotification is wired up."
+  "last_run_at": "2026-06-23T00:00:00Z",
+  "consecutive_failures": 4,
+  "rate_limit_resets_at": "2026-06-23T16:33:13Z",
+  "error": "PERSISTENT FAILURE (since 2026-06-19): (1) obsidianmd/obsidian-releases is not in the GitHub MCP session scope and cannot be added — mcp__claude-code-remote server unavailable; (2) GitHub REST API rate-limited (0/60 remaining from sandbox IP 146.148.68.157, resets 2026-06-23T16:33:13Z); (3) GitHub PR page returns 404 via WebFetch; (4) GitHub search returns 0 results for this repo; (5) PushNotification tool is not present in this session. Action required: add obsidianmd/obsidian-releases to the routine repo scope at https://code.claude.com and ensure PushNotification is wired up."
 }
