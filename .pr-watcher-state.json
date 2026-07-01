@@ -1,0 +1,10 @@
+{
+  "state": "merged",
+  "labels": [],
+  "latest_comment_id": null,
+  "latest_comment_at": null,
+  "latest_comment_author": null,
+  "review_states": {},
+  "first_run_at": "2026-07-01T00:00:00Z",
+  "notes": "PR #12416 could not be accessed directly (obsidianmd/obsidian-releases has Pull Requests disabled, returns 410). Plugin confirmed present in community-plugins.json since ~2026-05-12T15:30:06Z (commit b80a2193). Watcher treats state as merged."
+}
