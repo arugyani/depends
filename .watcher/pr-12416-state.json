@@ -1,13 +1,1 @@
-{
-  "state": "unknown",
-  "labels": [],
-  "latest_comment_id": null,
-  "latest_comment_at": null,
-  "latest_comment_author": null,
-  "review_states": {},
-  "first_run_at": "2026-06-19T00:00:00Z",
-  "last_run_at": "2026-06-23T00:00:00Z",
-  "consecutive_failures": 4,
-  "rate_limit_resets_at": "2026-06-23T16:33:13Z",
-  "error": "PERSISTENT FAILURE (since 2026-06-19): (1) obsidianmd/obsidian-releases is not in the GitHub MCP session scope and cannot be added — mcp__claude-code-remote server unavailable; (2) GitHub REST API rate-limited (0/60 remaining from sandbox IP 146.148.68.157, resets 2026-06-23T16:33:13Z); (3) GitHub PR page returns 404 via WebFetch; (4) GitHub search returns 0 results for this repo; (5) PushNotification tool is not present in this session. Action required: add obsidianmd/obsidian-releases to the routine repo scope at https://code.claude.com and ensure PushNotification is wired up."
-}
+ewogICJzdGF0ZSI6ICJ1bmtub3duIiwKICAibGFiZWxzIjogW10sCiAgImxhdGVzdF9jb21tZW50X2lkIjogbnVsbCwKICAibGF0ZXN0X2NvbW1lbnRfYXQiOiBudWxsLAogICJsYXRlc3RfY29tbWVudF9hdXRob3IiOiBudWxsLAogICJyZXZpZXdfc3RhdGVzIjoge30sCiAgImZpcnN0X3J1bl9hdCI6ICIyMDI2LTA2LTE5VDAwOjAwOjAwWiIsCiAgImxhc3RfcnVuX2F0IjogIjIwMjYtMDctMTFUMDA6MDA6MDBaIiwKICAiY29uc2VjdXRpdmVfZmFpbHVyZXMiOiA1LAogICJlcnJvciI6ICJQRVJTSVNURU5UIEZBSUxVUkUgKHNpbmNlIDIwMjYtMDYtMTksIDIyIGRheXMpOiAoMSkgb2JzaWRpYW5tZC9vYnNpZGlhbi1yZWxlYXNlcyBpcyBub3QgaW4gdGhlIEdpdEh1YiBNQ1Agc2Vzc2lvbiBzY29wZSAtLSBhbGxvd2VkIHJlcG9zOiBhcnVneWFuaS9kZXBlbmRzIG9ubHk7ICgyKSBHaXRIdWIgUkVTVCBBUEkgcmV0dXJucyA0MDMgRm9yYmlkZGVuIGZyb20gc2FuZGJveCBJUDsgKDMpIEdpdEh1YiBQUiBwYWdlIHJldHVybnMgNDA0IHZpYSBXZWJGZXRjaC4gQWN0aW9uIHJlcXVpcmVkOiBhZGQgb2JzaWRpYW5tZC9vYnNpZGlhbi1yZWxlYXNlcyB0byB0aGUgcm91dGluZSByZXBvIHNjb3BlIGF0IGh0dHBzOi8vY29kZS5jbGF1ZGUuY29tL3JvdXRpbmVzLiBOb3RpZmljYXRpb24gc2VudCAyMDI2LTA3LTExLiIKfQo=
